@@ -11,6 +11,7 @@ export default function Welcome() {
                     name="description"
                     content="Welcome to BVR Digital"
                 />
+                <meta name="keywords" content="seo, search engine optimization"/>
             </Head>
             <Guest>
                 {/* Hero Section Start */}
