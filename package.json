@@ -20,6 +20,9 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "framer-motion": "^10.12.16"
+        "@motionone/utils": "^10.15.1",
+        "@popmotion/popcorn": "^0.4.4",
+        "framer-motion": "^10.16.1",
+        "react-use": "^17.4.0"
     }
 }
