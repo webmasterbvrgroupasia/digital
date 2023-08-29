@@ -6,7 +6,7 @@ import dataComponies from "@/utils/dataCompenies.js";
 import { useRef } from "react";
 import dataServiceList from "@/utils/dataListService";
 import ParallaxText from "@/Components/Guests/ParallexText.jsx";
-import Section from "@/Components/LayoutAnimation.jsx";
+import Section from "@/Layouts/LayoutAnimation.jsx";
 
 export default function Welcome() {
     const ref = useRef(null);
