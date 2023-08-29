@@ -7,7 +7,7 @@ export default function Guest({ children }) {
         <>
             <Head></Head>
             <NavigationBar />
-            <body className="w-full bg-gradient-to-b from-gray-700 via-gray-900 to-black">
+            <body className="w-full  bg-black">
                 {children}
             </body>
             <Footer />

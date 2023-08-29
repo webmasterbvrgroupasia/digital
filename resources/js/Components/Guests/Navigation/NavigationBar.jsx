@@ -46,7 +46,7 @@ export default function NavigationBar() {
                                              aria-current="page">Home</Link>
                                    </li>
                                    <li>
-                                       <Link href="/grow-with-us"
+                                       <Link href="/about-us"
                                              className={`block py-2 pl-3 pr-4 ${window.location.pathname === '/grow-with-us' ? 'text-white bg-gray-800' : 'text-gray-800'} rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500`}
                                        >
                                            About</Link>
@@ -87,7 +87,7 @@ export default function NavigationBar() {
                        <Link href="/" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            Home
                        </Link>
-                       <Link  href="/grow-with-us" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
+                       <Link  href="/about-us" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            About
                        </Link>
                        <Link href="/assets" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
