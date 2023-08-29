@@ -12,6 +12,7 @@ class Blogpost extends Model
     protected $table = 'blogposts';
 
     protected $fillable = [
+        'title',
         'content',
         'meta_description',
         'meta_keywords',

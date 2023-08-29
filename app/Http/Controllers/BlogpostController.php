@@ -31,6 +31,8 @@ class BlogpostController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
+            'title' => ['required', 'max:255'],
+
             'content' => ['required', 'max:255'],
 
             'meta_description' => ['required', 'max:255'],
@@ -75,6 +77,8 @@ class BlogpostController extends Controller
     public function update(Request $request, Blogpost $blogpost)
     {
         $validateData = $request->validate([
+            'title' => ['required', 'max:255'],
+
             'content' => ['required', 'max:255'],
 
             'meta_description' => ['required', 'max:255'],

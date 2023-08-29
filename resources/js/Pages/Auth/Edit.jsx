@@ -4,6 +4,7 @@ import Authenticated from "@/Layouts/AuthenticatedLayout.jsx";
 
 export default function Edit({ auth, blogposts }) {
     const { data, setData, post, processing, errors, progress } = useForm({
+        title: blogposts.title,
         _method: 'put',
         content: blogposts.content,
         meta_description: blogposts.meta_description,
@@ -32,6 +33,23 @@ export default function Edit({ auth, blogposts }) {
                 <section className="max-w-4xl p-8 bg-white rounded-lg drop-shadow-lg">
                     <div className="">
                         <form className="" onSubmit={handleSubmit}>
+                            <div className="mb-6">
+                                <label
+                                    htmlFor="title"
+                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                >
+                                    Title
+                                </label>
+                                <input
+                                    type="text"
+                                    id="title"
+                                    value={data.title}
+                                    onChange={event => setData('title', event.target.value)}
+                                    className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                                    placeholder="Title.."
+                                    required
+                                />
+                            </div>
                             <div className="mb-6">
                                 <label
                                     htmlFor="content"
