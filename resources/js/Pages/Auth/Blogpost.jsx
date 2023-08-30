@@ -14,6 +14,13 @@ export default function Blogpost({ auth, blogposts, session }) {
         router.delete(`/admin/blogposts/${id}`)
     }
 
+    function sliceDescription(metaDescripition) {
+        const splitDescription = metaDescripition.split(" ");
+        const sliceDescription = splitDescription.slice(0, 5);
+        return sliceDescription.join(' ');
+
+    }
+
     return (
         <>
             <Authenticated
@@ -86,7 +93,7 @@ export default function Blogpost({ auth, blogposts, session }) {
                                             scope="row"
                                             className="px-6 py-5 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                                         >
-                                            {post.meta_description}
+                                            {sliceDescription(post.meta_description)}....
                                         </th>
                                         <th
                                             scope="row"
