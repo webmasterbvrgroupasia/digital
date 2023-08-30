@@ -20,7 +20,7 @@ export default function PostList({ item }) {
                     <p className="text-neutral-400">
                         {sliceDescription(item.meta_description)}
                     </p>
-                    <Link href="/blogpost/detail" className="text-blue-600 flex text-semibold items-center space-x-3">
+                    <Link href={`/blogpost/detail/${item.id}`} className="text-blue-600 flex text-semibold items-center space-x-3">
                         <div>Read More</div>
                         <div>
                             <svg

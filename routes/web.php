@@ -34,7 +34,7 @@ Route::get('/about-us',function(){
 
 
 Route::get('/blogposts',[GuestBlogpostController::class,'index']);
-Route::get('/blogpost/detail',[GuestBlogpostController::class,'show']);
+Route::get('/blogpost/detail/{blogpost}',[GuestBlogpostController::class,'show']);
 
 
 Route::get('/portfolio',[PortfolioController::class,'index']);

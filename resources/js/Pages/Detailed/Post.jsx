@@ -3,7 +3,9 @@ import Guest from "@/Layouts/Guest";
 import { Head } from "@inertiajs/react";
 import React from "react";
 
-function Post() {
+function Post({ blogpost }) {
+
+    console.log(blogpost)
     return (
         <>
             <Head>
@@ -21,41 +23,24 @@ function Post() {
                     postTitle={
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dolores?"
                     }
+                    image={blogpost.image}
                 />
                 <section className="max-w-4xl mx-auto pt-14 md:pt-24 pb-14 md:pb-24 px-4 md:px-4 lg:px-0 mt-20 md:mt-0">
                     <article className="space-y-4">
                         <h3 className="text-white text-lg font-bold">
-                            Introduction
+                            {blogpost.title}
                         </h3>
                         <p className=" text-neutral-200 leading-relaxed">
-                            In the dynamic realm of business, a robust digital
-                            presence is no longer a luxury – it's a necessity.
-                            Welcome to BVR Digital, where we transform
-                            businesses into online powerhouses through strategic
-                            digital marketing solutions. With a focus on SEO,
-                            social media management, content creation, and more,
-                            we're your partners in achieving unparalleled online
-                            success.
+                            {blogpost.content}
                         </p>
                         <h3 className="text-white text-lg font-bold">
-                            The Power of SEO: Dominating Search Rankings
+                            {blogpost.meta_keywords}
                         </h3>
                         <p className=" text-neutral-200 leading-relaxed">
-                            Our agency excels in Search Engine Optimization
-                            (SEO), a cornerstone of modern digital marketing.
-                            Our team of skilled SEO experts employs cutting-edge
-                            techniques to enhance your website's visibility on
-                            search engines. By meticulously researching and
-                            implementing relevant keywords, optimizing meta
-                            tags, and refining your website's structure, we
-                            ensure that your brand secures a prime spot in
-                            search engine rankings. With our SEO strategies,
-                            your business gains increased organic traffic and
-                            the competitive edge it deserves.
+                            {blogpost.meta_description}
                         </p>
                         <h3 className="text-white text-lg font-bold">
-                            Strategic Social Media Management: Engage and
-                            Conquer
+                            {blogpost.tags}
                         </h3>
                         <p className=" text-neutral-200 leading-relaxed">
                             In an era where social media reigns supreme, an
