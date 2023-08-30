@@ -1,6 +1,9 @@
 import React from "react";
-
 function PostHeader({ altText, postTitle, createdAt, image }) {
+
+    function convertTimeStamp() {
+        return  new Date(createdAt).toLocaleDateString("en-US")
+    }
     return (
         <>
             <header className="max-w-4xl mx-auto h-screen md:h-auto items-center flex px-4 md:px-4 lg:px-0">
@@ -13,7 +16,7 @@ function PostHeader({ altText, postTitle, createdAt, image }) {
                         {postTitle}
                     </h1>
                     <p className="text-neutral-400 text-lg max-w-2xl">
-                        {createdAt}
+                        {convertTimeStamp()}
                     </p>
                 </div>
             </header>

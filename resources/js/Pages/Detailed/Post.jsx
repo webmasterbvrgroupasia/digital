@@ -2,10 +2,11 @@ import PostHeader from "@/Components/Guests/PostHeader";
 import Guest from "@/Layouts/Guest";
 import { Head } from "@inertiajs/react";
 import React from "react";
+import { Parser } from "html-to-react";
 
 function Post({ blogpost }) {
 
-    console.log(blogpost)
+
     return (
         <>
             <Head>
@@ -19,7 +20,7 @@ function Post({ blogpost }) {
             <Guest>
                 <PostHeader
                     altText={"Test Alt Text"}
-                    createdAt={"8th August 2023"}
+                    createdAt={blogpost.created_at}
                     postTitle={
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dolores?"
                     }
@@ -31,7 +32,7 @@ function Post({ blogpost }) {
                             {blogpost.title}
                         </h3>
                         <p className=" text-neutral-200 leading-relaxed">
-                            {blogpost.content}
+                            {Parser().parse(blogpost.content)}
                         </p>
                         <h3 className="text-white text-lg font-bold">
                             {blogpost.meta_keywords}
@@ -42,35 +43,35 @@ function Post({ blogpost }) {
                         <h3 className="text-white text-lg font-bold">
                             {blogpost.tags}
                         </h3>
-                        <p className=" text-neutral-200 leading-relaxed">
-                            In an era where social media reigns supreme, an
-                            effective presence across platforms is
-                            non-negotiable. Our digital marketing agency crafts
-                            customized social media strategies tailored to your
-                            brand's voice and goals. From compelling content
-                            creation to real-time engagement with your audience,
-                            we've got it all covered. By harnessing the immense
-                            potential of platforms like Facebook, Instagram,
-                            Twitter, and LinkedIn, we'll help you forge
-                            meaningful connections, boost brand loyalty, and
-                            drive conversions.
-                        </p>
-                        <h3 className="text-white text-lg font-bold">
-                            Compelling Content Creation: Your Brand Story,
-                            Perfected
-                        </h3>
-                        <p className=" text-neutral-200 leading-relaxed">
-                            Compelling content lies at the heart of every
-                            successful digital marketing campaign. Our skilled
-                            content creators are adept at weaving narratives
-                            that resonate with your audience. Whether it's blog
-                            posts, infographics, videos, or interactive content,
-                            we create pieces that inform, entertain, and inspire
-                            action. By aligning content with your brand's values
-                            and your audience's interests, we facilitate
-                            authentic connections that foster trust and brand
-                            loyalty.
-                        </p>
+                        {/*<p className=" text-neutral-200 leading-relaxed">*/}
+                        {/*    In an era where social media reigns supreme, an*/}
+                        {/*    effective presence across platforms is*/}
+                        {/*    non-negotiable. Our digital marketing agency crafts*/}
+                        {/*    customized social media strategies tailored to your*/}
+                        {/*    brand's voice and goals. From compelling content*/}
+                        {/*    creation to real-time engagement with your audience,*/}
+                        {/*    we've got it all covered. By harnessing the immense*/}
+                        {/*    potential of platforms like Facebook, Instagram,*/}
+                        {/*    Twitter, and LinkedIn, we'll help you forge*/}
+                        {/*    meaningful connections, boost brand loyalty, and*/}
+                        {/*    drive conversions.*/}
+                        {/*</p>*/}
+                        {/*<h3 className="text-white text-lg font-bold">*/}
+                        {/*    Compelling Content Creation: Your Brand Story,*/}
+                        {/*    Perfected*/}
+                        {/*</h3>*/}
+                        {/*<p className=" text-neutral-200 leading-relaxed">*/}
+                        {/*    Compelling content lies at the heart of every*/}
+                        {/*    successful digital marketing campaign. Our skilled*/}
+                        {/*    content creators are adept at weaving narratives*/}
+                        {/*    that resonate with your audience. Whether it's blog*/}
+                        {/*    posts, infographics, videos, or interactive content,*/}
+                        {/*    we create pieces that inform, entertain, and inspire*/}
+                        {/*    action. By aligning content with your brand's values*/}
+                        {/*    and your audience's interests, we facilitate*/}
+                        {/*    authentic connections that foster trust and brand*/}
+                        {/*    loyalty.*/}
+                        {/*</p>*/}
                     </article>
                 </section>
             </Guest>

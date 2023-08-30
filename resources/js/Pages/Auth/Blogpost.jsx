@@ -3,7 +3,6 @@ import {Head, Link, router} from "@inertiajs/react";
 import AlertMessage from "@/Components/AlertMessage.jsx";
 import Authenticated from "@/Layouts/AuthenticatedLayout.jsx";
 import Pagination from "@/Components/Pagination.jsx";
-import { Parser } from "html-to-react";
 import BlogPostList from "@/Components/BlogPostList.jsx";
 
 export default function Blogpost({ auth, blogposts, session }) {
