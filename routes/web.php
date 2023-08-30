@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BlogpostController;
+use App\Http\Controllers\Guest\BlogpostController as GuestBlogpostController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +31,16 @@ Route::get('/', function () {
 Route::get('/about-us',function(){
     return Inertia::render('About');
 });
+
+
+Route::get('/blogposts',[GuestBlogpostController::class,'index']);
+Route::get('/blogpost/detail',[GuestBlogpostController::class,'show']);
+
+
+Route::get('/portfolio',[PortfolioController::class,'index']);
+Route::get('/portfolio/detail',[PortfolioController::class,'show']);
+
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

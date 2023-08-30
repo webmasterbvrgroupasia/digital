@@ -7,11 +7,8 @@ export default function Guest({ children }) {
         <>
             <Head></Head>
             <NavigationBar />
-            <body className="w-full  bg-black">
-                {children}
-            </body>
+            <section className="w-full  bg-black">{children}</section>
             <Footer />
-
         </>
     );
 }

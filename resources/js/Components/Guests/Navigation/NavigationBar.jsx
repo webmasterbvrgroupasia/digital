@@ -12,9 +12,9 @@ export default function NavigationBar() {
            <nav className="w-full py-4 px-4 bg-transparent z-50 flex md:flex absolute top-0 left-0 lg:hidden items-center justify-between">
                <div>
                    <img
-                       src="/images/logo.png"
+                       src="/images/vertical-white.png"
                        className="w-10"
-                       alt="Grand Land Corp"
+                       alt="BVR Digital"
                    />
                </div>
                <div>
@@ -65,7 +65,7 @@ export default function NavigationBar() {
                                    </li>
                                    <li>
                                        <Link href="/about-us"
-                                             className={`block py-2 pl-3 pr-4 ${window.location.pathname === '/about-us' ? 'text-white bg-gray-800' : 'text-gray-800'} rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500`}
+                                             className={`block py-2 pl-3 pr-4 ${window.location.pathname === '/service' ? 'text-white bg-gray-800' : 'text-gray-800'} rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500`}
                                        >    Service</Link>
                                    </li>
                                </ul>
@@ -78,9 +78,9 @@ export default function NavigationBar() {
                <div className="hidden md:hidden lg:grid grid-cols-4 items-center py-4 max-w-6xl mx-auto">
                    <div className="">
                        <img
-                           src="#"
-                           alt="Logo"
-                           className="w-16"
+                           src="/images/horizontal-white.png"
+                           alt="BVR Digital"
+                           className="w-44"
                        />
                    </div>
                    <div className="flex justify-between col-span-2">
@@ -96,7 +96,10 @@ export default function NavigationBar() {
                        <Link  href="/activities" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            Contact
                        </Link>
-                       <Link  href="/about-us" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
+                       <Link  href="/portfolio" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
+                           Portfolio
+                       </Link>
+                       <Link  href="/service" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            Service
                        </Link>
                    </div>

@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="max-w-full md:max-w-2xl lg:max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-0">
                     <div className="space-y-4">
                         <div className="text-white font-bold uppercase">
-                            link
+                            useful links
                         </div>
                         <ul className="text-neutral-400 space-y-4">
                             <li>
@@ -26,20 +26,11 @@ export default function Footer() {
                     </div>
                     <div className="space-y-4">
                         <div className="text-white font-bold uppercase">
-                            link
+                            articles and blogposts
                         </div>
                         <ul className="text-neutral-400 space-y-4">
                             <li>
-                                <Link href="">Home</Link>
-                            </li>
-                            <li>
-                                <Link href="">About Us</Link>
-                            </li>
-                            <li>
-                                <Link href="">Services</Link>
-                            </li>
-                            <li>
-                                <Link href="">Career</Link>
+                                <Link href="/blogposts">Blogposts</Link>
                             </li>
                         </ul>
                     </div>
@@ -83,7 +74,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="space-y-5 max-w-sm mx-0 md:mx-auto mt-16 px-4 md:px-0">
-                    <img src="images/digital-horizontal-whitefont.png" className="w-44 mx-0 md:mx-auto" alt="BVR Digital" />
+                    <img src="/images/vertical-white.png" className="w-20 mx-0 md:mx-auto" alt="BVR Digital" />
                     <div className="text-neutral-400 text-sm text-left md:text-center">
                         © 2023 BVR Digital. All rights reserved.
                     </div>

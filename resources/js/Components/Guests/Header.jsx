@@ -2,14 +2,14 @@ import React from "react";
 
 function Header({subTitle, mainTitle, descriptionText}) {
     return (
-        <header className="h-screen flex items-center justify-center static -z-50">
-            <div className=" z-0 left-0 top-10">
-                <img
+        <header className="h-screen flex items-center justify-center static -z-10">
+            <div className="absolute left-0 top-10">
+                <img className="h-96"
                     src="https://framerusercontent.com/images/VAghYRak1orJZWcevSJLQXlxmM.svg"
                     alt=""
                 />
             </div>
-            <div className="text-center space-y-2">
+            <div className="text-center w-fit mx-auto absolute z-50 space-y-2 px-4">
                 <span className="text-neutral-300 text-base md:text-lg">
                     {subTitle}
                 </span>
@@ -20,9 +20,9 @@ function Header({subTitle, mainTitle, descriptionText}) {
                     {descriptionText}
                 </p>
             </div>
-            <div className=" right-0 top-1">
+            <div className="absolute right-0 top-0">
                 <img
-                    className="h-auto"
+                    className="h-96"
                     src="https://framerusercontent.com/images/EV0JayRnHcKEROFlY5vlvdol8G4.svg"
                     alt=""
                 />
