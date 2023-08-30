@@ -1,6 +1,7 @@
 import React from "react";
 import {Head, router, useForm} from "@inertiajs/react";
 import Authenticated from "@/Layouts/AuthenticatedLayout.jsx";
+import TextEditor from "@/Components/CkEditor.jsx";
 
 export default function Edit({ auth, blogposts }) {
     const { data, setData, post, processing, errors, progress } = useForm({
@@ -50,40 +51,7 @@ export default function Edit({ auth, blogposts }) {
                                     required
                                 />
                             </div>
-                            <div className="mb-6">
-                                <label
-                                    htmlFor="content"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                >
-                                    content
-                                </label>
-                                <input
-                                    type="text"
-                                    id="content"
-                                    value={data.content}
-                                    onChange={event => setData('content', event.target.value)}
-                                    className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                                    placeholder="content.."
-                                    required
-                                />
-                            </div>
-                            <div className="mb-6">
-                                <label
-                                    htmlFor="description"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                >
-                                    Description
-                                </label>
-                                <input
-                                    type="text"
-                                    id="description"
-                                    value={data.meta_description}
-                                    onChange={event => setData('meta_description', event.target.value)}
-                                    className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                                    placeholder="Description.."
-                                    required
-                                />
-                            </div>
+
                             <div className="mb-6">
                                 <label
                                     htmlFor="keywords"
@@ -121,20 +89,39 @@ export default function Edit({ auth, blogposts }) {
 
                             <div className="mb-6">
                                 <label
-                                    htmlFor="description"
+                                    htmlFor="image"
                                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 >
                                     Image
                                 </label>
                                 <input
                                     type="file"
-                                    id="description"
+                                    id="image"
                                     onChange={event =>
                                         setData('image', event.target.files[0])
                                     }
                                     className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                                 />
                             </div>
+
+                            <div className="mb-6">
+
+                                <label htmlFor="description"
+                                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+                                <textarea id="description" rows="6"
+                                          value={data.meta_description}
+                                          onChange={event => setData('meta_description', event.target.value)}
+                                          className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                          placeholder="Write your thoughts here..."></textarea>
+
+                            </div>
+
+                            <div className="mb-6">
+                                <label htmlFor="content"
+                                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Content</label>
+                                <TextEditor content={data.content} onChange={event => setData("content",event)} />
+                            </div>
+
 
                             <button
                                 type="submit"

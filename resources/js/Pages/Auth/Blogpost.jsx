@@ -3,6 +3,7 @@ import {Head, Link, router} from "@inertiajs/react";
 import AlertMessage from "@/Components/AlertMessage.jsx";
 import Authenticated from "@/Layouts/AuthenticatedLayout.jsx";
 import Pagination from "@/Components/Pagination.jsx";
+import { Parser } from "html-to-react";
 
 export default function Blogpost({ auth, blogposts, session }) {
     const [alert, setAlert] = useState(session.success);
@@ -79,7 +80,7 @@ export default function Blogpost({ auth, blogposts, session }) {
                                             scope="row"
                                             className="px-6 py-5 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                                         >
-                                            {post.content}
+                                            {Parser().parse(post.content)}
                                         </th>
                                         <th
                                             scope="row"
