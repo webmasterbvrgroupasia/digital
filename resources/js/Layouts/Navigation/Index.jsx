@@ -1,5 +1,20 @@
 import { Link } from "@inertiajs/react";
 import {useState} from "react";
+import { motion } from "framer-motion";
+
+const icon = {
+    hidden: {
+        opacity: 0,
+        pathLength: 0,
+        fill: "rgba(255, 255, 255, 0)"
+    },
+    visible: {
+        opacity: 1,
+        pathLength: 1,
+        fill: "rgb(255,255,255)"
+    }
+};
+
 
 export default function Index() {
     const [toggleNavbar, setToggleNavbar] = useState(false);
@@ -11,10 +26,24 @@ export default function Index() {
        <>
            <nav className="w-full py-4 px-4 bg-transparent z-50 flex md:flex absolute top-0 left-0 lg:hidden items-center justify-between">
                <div>
+<<<<<<< Updated upstream:resources/js/Layouts/Navigation/Index.jsx
                    <img
                        src="/images/vertical-white.png"
                        className="w-10"
                        alt="BVR Digital"
+=======
+                   <motion.img
+                       src="images/digital-horizontal-whitefont.png"
+                       alt="Logo"
+                       className="w-16"
+                       variants={icon}
+                       initial="hidden"
+                       animate="visible"
+                       transition={{
+                           default: { duration: 2, ease: "easeInOut" },
+                           fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+                       }}
+>>>>>>> Stashed changes:resources/js/Components/Guests/Navigation/NavigationBar.jsx
                    />
                </div>
                <div>
@@ -76,11 +105,26 @@ export default function Index() {
            </nav>
            <nav className="w-full z-50 absolute top-0 left-0">
                <div className="hidden md:hidden lg:grid grid-cols-4 items-center py-4 max-w-6xl mx-auto">
+<<<<<<< Updated upstream:resources/js/Layouts/Navigation/Index.jsx
                    <div className="">
                        <img
                            src="/images/horizontal-white.png"
                            alt="BVR Digital"
                            className="w-44"
+=======
+                   <div className="container">
+                       <motion.img
+                           src="images/digital-horizontal-whitefont.png"
+                           alt="Logo"
+                           className="w-16"
+                           variants={icon}
+                           initial="hidden"
+                           animate="visible"
+                           transition={{
+                               default: { duration: 2, ease: "easeInOut" },
+                               fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+                           }}
+>>>>>>> Stashed changes:resources/js/Components/Guests/Navigation/NavigationBar.jsx
                        />
                    </div>
                    <div className="flex justify-between col-span-2">

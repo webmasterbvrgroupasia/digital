@@ -13,7 +13,7 @@ const ParallaxText = ({ children, baseVelocity = 100 }) => {
         clamp: false,
     });
 
-    const x = useTransform(baseX, (v) => `${wrap(-0, -90, v)}%`);
+    const x = useTransform(baseX, (v) => `${wrap(-40, 20, v)}%`);
 
     const directionFactor = useRef(1);
     useAnimationFrame((t, delta) => {
@@ -36,6 +36,7 @@ const ParallaxText = ({ children, baseVelocity = 100 }) => {
         <div className="parallax">
             <motion.div className="scroller" style={{ x }}>
                 <span>{children} </span>
+
             </motion.div>
         </div>
     );

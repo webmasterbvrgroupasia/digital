@@ -1,6 +1,9 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+<<<<<<< Updated upstream:resources/js/Layouts/Layout/LayoutAnimation.jsx
 import Index from "@/Layouts/Navigation/Index.jsx";
+=======
+>>>>>>> Stashed changes:resources/js/Components/LayoutAnimation.jsx
 
 export default function Section({ children }) {
     const ref = useRef(null);

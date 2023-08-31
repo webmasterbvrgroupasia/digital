@@ -3,13 +3,14 @@ import Guest from "@/Layouts/Layout/Guest.jsx";
 import ServiceList from "@/Components/Guests/List/ServiceList.jsx";
 import CompenyList from "@/Components/Guests/List/CompenyList.jsx";
 import dataComponies from "@/utils/dataCompenies.js";
-import { useRef } from "react";
+import {useEffect, useRef} from "react";
 import dataServiceList from "@/utils/dataListService";
 import ParallaxText from "@/Components/Guests/ParallexText.jsx";
 import Section from "@/Layouts/Layout/LayoutAnimation.jsx";
 
 export default function Welcome() {
     const ref = useRef(null);
+
 
     return (
         <>
@@ -35,17 +36,21 @@ export default function Welcome() {
                 <Section>
                     <section className="py-24 grid grid-cols-2 max-w-7xl mx-auto">
                         <div className="space-y-[16px]">
-                            <h2 className="text-white capitalize leading-tight text-4xl font-extrabold">
-                                Innovating brands with transformative digital
-                                solutions.
-                            </h2>
-                            <p className="text-gray-400 text-xl font-normal">
-                                Welcome to our creative agency! We specialize in
-                                revolutionizing brands through cutting-edge digital
-                                solutions that captivate, engage, and elevate your
-                                business to new heights. Let's create magic
-                                together!
-                            </p>
+                            <Section>
+                                <h2 className="text-white capitalize leading-tight text-4xl font-extrabold">
+                                    Innovating brands with transformative digital
+                                    solutions.
+                                </h2>
+                            </Section>
+                            <Section>
+                                <p className="text-gray-400 text-xl font-normal">
+                                    Welcome to our creative agency! We specialize in
+                                    revolutionizing brands through cutting-edge digital
+                                    solutions that captivate, engage, and elevate your
+                                    business to new heights. Let's create magic
+                                    together!
+                                </p>
+                            </Section>
                         </div>
                         <div className="space-y-[16px]">
                             <p className="text-gray-400 text-xl font-normal">
@@ -138,7 +143,6 @@ export default function Welcome() {
                         </div>
                     </section>
                 </Section>
-
             </Guest>
         </>
     );
