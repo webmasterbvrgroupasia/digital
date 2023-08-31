@@ -36,6 +36,10 @@ function Index({ posts }) {
                     ))
                 }
 
+                <div className="max-w-7xl mx-auto">
+                    <Pagination links={links} perPage={per_page} total={total} background={"black"} />
+                </div>
+
             </Guest>
         </>
     );

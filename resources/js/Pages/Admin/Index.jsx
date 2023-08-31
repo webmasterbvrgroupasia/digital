@@ -4,7 +4,7 @@ import Authenticated from "@/Layouts/Layout/AuthenticatedLayout.jsx";
 import Pagination from "@/Components/Paginations/Pagination.jsx";
 import BlogpostList from "@/Components/Admin/List/Index.jsx";
 import AlertMessage from  "@/Components/Admin/Alert/Index.jsx";
-
+import TableHeader from "@/Components/Admin/TableHeader/Index.jsx";
 export default function Index({ auth, blogposts, session }) {
     const [alert, setAlert] = useState(session.success);
 
@@ -46,24 +46,7 @@ export default function Index({ auth, blogposts, session }) {
                         <table className="w-full table-auto text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
-                                <th scope="col" className="px-6 py-5">
-                                    Title
-                                </th>
-                                <th scope="col" className="px-6 py-5">
-                                    Content
-                                </th>
-                                <th scope="col" className="px-6 py-5">
-                                    Description
-                                </th>
-                                <th scope="col" className="px-6 py-5">
-                                    Keywords
-                                </th>
-                                <th scope="col" className="px-6 py-5">
-                                    Tags
-                                </th>
-                                <th scope="col" className="px-6 py-5">
-                                    Action
-                                </th>
+                                <TableHeader data={["Title", "Content", "Description", "Keywords", "Tags", "action"]} />
                             </tr>
                             </thead>
                             <tbody>
@@ -78,7 +61,7 @@ export default function Index({ auth, blogposts, session }) {
 
                         </table>
                     </div>
-                    <Pagination links={links} perPage={per_page} total={total} />
+                    <Pagination links={links} perPage={per_page} total={total} background={"white"} />
                 </section>
             </Authenticated>
         </>
