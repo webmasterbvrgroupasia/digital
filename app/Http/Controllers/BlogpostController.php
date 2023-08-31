@@ -14,7 +14,7 @@ class BlogpostController extends Controller
     public function index()
     {
         $blogpost = Blogpost::paginate(5);
-        return Inertia::render('Auth/Blogpost', ['blogposts' => $blogpost]);
+        return Inertia::render('Admin/Index', ['blogposts' => $blogpost]);
     }
 
     /**
@@ -22,7 +22,7 @@ class BlogpostController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Auth/Create');
+        return Inertia::render('Admin/Create');
     }
 
     /**
@@ -68,7 +68,7 @@ class BlogpostController extends Controller
      */
     public function edit(Blogpost $blogpost)
     {
-        return Inertia::render('Auth/Edit', ['blogposts' => $blogpost]);
+        return Inertia::render('Admin/Edit', ['blogposts' => $blogpost]);
     }
 
     /**

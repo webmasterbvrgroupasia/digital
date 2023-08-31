@@ -14,10 +14,10 @@ class BlogpostController extends Controller
 
         $posts = DB::table('blogposts')->paginate(10);
 
-        return Inertia::render('Post',['posts'=>$posts]);
+        return Inertia::render('Guest/Blogpost/Index',['posts'=>$posts]);
     }
 
     public function show(Blogpost $blogpost) {
-        return Inertia::render('Detailed/Post', ["blogpost" => $blogpost]);
+        return Inertia::render('Guest/Blogpost/Detail', ["blogpost" => $blogpost]);
     }
 }

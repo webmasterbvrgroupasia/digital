@@ -1,7 +1,7 @@
 import { Link } from "@inertiajs/react";
 import {useState} from "react";
 
-export default function NavigationBar() {
+export default function Index() {
     const [toggleNavbar, setToggleNavbar] = useState(false);
 
     function onClickToggle() {
@@ -96,8 +96,8 @@ export default function NavigationBar() {
                        <Link  href="/activities" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            Contact
                        </Link>
-                       <Link  href="/portfolio" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
-                           Portfolio
+                       <Link href="/Guest/Portfolio/Index" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
+                           Index
                        </Link>
                        <Link  href="/service" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            Service

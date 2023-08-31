@@ -28,8 +28,12 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about-us',function(){
-    return Inertia::render('About');
+Route::get('/about-us',function() {
+    return Inertia::render('Guest/About/Index');
+});
+
+Route::get('/service', function () {
+   return Inertia::render('Guest/Service/Index');
 });
 
 
@@ -52,7 +56,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'Admin', 'middleware' => ['auth']], function () {
     Route::resource('/blogposts',BlogpostController::class);
 });
 

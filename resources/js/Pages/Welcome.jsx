@@ -1,12 +1,12 @@
 import { Head, Link } from "@inertiajs/react";
-import Guest from "@/Layouts/Guest";
-import ServiceList from "@/Components/Guests/ServiceList.jsx";
-import CompenyList from "@/Components/Guests/CompenyList.jsx";
+import Guest from "@/Layouts/Layout/Guest.jsx";
+import ServiceList from "@/Components/Guests/List/ServiceList.jsx";
+import CompenyList from "@/Components/Guests/List/CompenyList.jsx";
 import dataComponies from "@/utils/dataCompenies.js";
 import { useRef } from "react";
 import dataServiceList from "@/utils/dataListService";
 import ParallaxText from "@/Components/Guests/ParallexText.jsx";
-import Section from "@/Layouts/LayoutAnimation.jsx";
+import Section from "@/Layouts/Layout/LayoutAnimation.jsx";
 
 export default function Welcome() {
     const ref = useRef(null);

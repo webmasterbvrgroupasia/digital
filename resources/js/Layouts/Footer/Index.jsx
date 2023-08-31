@@ -1,6 +1,6 @@
 import { Link } from "@inertiajs/react";
 
-export default function Footer() {
+export default function Index() {
     return (
         <>
             <footer className="border-t bg-black border-neutral-800 py-16 md:py-16 w-full">

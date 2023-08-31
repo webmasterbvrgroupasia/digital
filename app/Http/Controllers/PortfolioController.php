@@ -13,10 +13,10 @@ class PortfolioController extends Controller
 
         $projects = DB::table('projects')->paginate(10);
 
-        return Inertia::render('Portfolio',['projects'=>$projects]);
+        return Inertia::render('Guest/Portfolio/Index',['projects'=>$projects]);
     }
 
     public function show() {
-        return Inertia::render('Detailed/Project');
+        return Inertia::render('Guest/Portfolio/Detail');
     }
 }

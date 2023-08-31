@@ -1,10 +1,10 @@
-import Header from "@/Components/Guests/Header";
-import Guest from "@/Layouts/Guest";
-import Section from "@/Layouts/LayoutAnimation";
+import Header from "@/Components/Guests/Header/Header.jsx";
+import Guest from "@/Layouts/Layout/Guest.jsx";
+import Section from "@/Layouts/Layout/LayoutAnimation.jsx";
 import { Head, Link } from "@inertiajs/react";
 import React from "react";
 
-function Portfolio() {
+function Index() {
     return (
         <>
             <Head>
@@ -18,7 +18,7 @@ function Portfolio() {
             <Guest>
                 <Section>
                     <Header
-                        subTitle={"Portfolio"}
+                        subTitle={"Index"}
                         mainTitle={"Our Best Works"}
                         descriptionText={
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eius."
@@ -59,7 +59,7 @@ function Portfolio() {
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </section>
             </Guest>
@@ -67,4 +67,4 @@ function Portfolio() {
     );
 }
 
-export default Portfolio;
+export default Index;

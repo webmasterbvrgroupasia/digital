@@ -1,17 +1,17 @@
 import React, {useState} from "react";
 import {Head, Link, router} from "@inertiajs/react";
-import AlertMessage from "@/Components/AlertMessage.jsx";
-import Authenticated from "@/Layouts/AuthenticatedLayout.jsx";
-import Pagination from "@/Components/Pagination.jsx";
-import BlogPostList from "@/Components/BlogPostList.jsx";
+import Authenticated from "@/Layouts/Layout/AuthenticatedLayout.jsx";
+import Pagination from "@/Components/Paginations/Pagination.jsx";
+import BlogpostList from "@/Components/Admin/List/Index.jsx";
+import AlertMessage from  "@/Components/Admin/Alert/Index.jsx";
 
-export default function Blogpost({ auth, blogposts, session }) {
+export default function Index({ auth, blogposts, session }) {
     const [alert, setAlert] = useState(session.success);
 
     const { data, links, per_page, total } = blogposts;
 
     function handleDelete(id) {
-        router.delete(`/admin/blogposts/${id}`)
+        router.delete(`/Admin/blogposts/${id}`)
     }
 
     return (
@@ -69,7 +69,7 @@ export default function Blogpost({ auth, blogposts, session }) {
                             <tbody>
                             {data ? (
                                 data.map((post,i) => (
-                                   <BlogPostList post={post} key={i} onDelete={handleDelete}/>
+                                   <BlogpostList post={post} key={i} onDelete={handleDelete}/>
                                 ))
                             ) : (
                                 <div>Data is unavailable</div>

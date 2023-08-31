@@ -1,10 +1,10 @@
-import PostHeader from "@/Components/Guests/PostHeader";
-import Guest from "@/Layouts/Guest";
+import PostHeader from "@/Components/Guests/Header/PostHeader.jsx";
+import Guest from "@/Layouts/Layout/Guest.jsx";
 import { Head } from "@inertiajs/react";
 import React from "react";
 import { Parser } from "html-to-react";
 
-function Post({ blogpost }) {
+function Detail({ blogpost }) {
 
 
     return (
@@ -31,9 +31,6 @@ function Post({ blogpost }) {
                         <h3 className="text-white text-lg font-bold">
                             {blogpost.title}
                         </h3>
-                        <p className=" text-neutral-200 leading-relaxed">
-                            {Parser().parse(blogpost.content)}
-                        </p>
                         <h3 className="text-white text-lg font-bold">
                             {blogpost.meta_keywords}
                         </h3>
@@ -43,6 +40,9 @@ function Post({ blogpost }) {
                         <h3 className="text-white text-lg font-bold">
                             {blogpost.tags}
                         </h3>
+                        <div className=" text-neutral-200 leading-relaxed">
+                            {Parser().parse(blogpost.content)}
+                        </div>
                         {/*<p className=" text-neutral-200 leading-relaxed">*/}
                         {/*    In an era where social media reigns supreme, an*/}
                         {/*    effective presence across platforms is*/}
@@ -79,4 +79,4 @@ function Post({ blogpost }) {
     );
 }
 
-export default Post;
+export default Detail;

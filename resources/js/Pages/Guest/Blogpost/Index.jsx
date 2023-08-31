@@ -1,19 +1,22 @@
-import Header from "@/Components/Guests/Header";
-import Guest from "@/Layouts/Guest";
-import Section from "@/Layouts/LayoutAnimation";
+import Header from "@/Components/Guests/Header/Header.jsx";
+import Guest from "@/Layouts/Layout/Guest.jsx";
+import Section from "@/Layouts/Layout/LayoutAnimation.jsx";
 import { Head, Link } from "@inertiajs/react";
 import React from "react";
-import PostList from "@/Components/Guests/PostList.jsx";
+import PostList from "@/Components/Guests/List/PostList.jsx";
+import Pagination from "@/Components/Paginations/Pagination.jsx";
 
-function Post({ posts }) {
+function Index({ posts }) {
+
+    const { data, links, total, per_page } = posts;
 
     return (
         <>
             <Head>
-                <title>About Us</title>
+                <title>Index Us</title>
                 <meta
                     name="description"
-                    content="BVR Digital About Page Description"
+                    content="BVR Digital Index Page Description"
                 />
                 <meta name="keywords" content="seo, websss design" />
             </Head>
@@ -28,13 +31,14 @@ function Post({ posts }) {
                     />
                 </Section>
                 {
-                    posts.data.map((item , i)=> (
+                    data.map((item , i)=> (
                       <PostList item={item} key={i} />
                     ))
                 }
+
             </Guest>
         </>
     );
 }
 
-export default Post;
+export default Index;

@@ -1,10 +1,10 @@
-import Header from "@/Components/Guests/Header";
-import PostHeader from "@/Components/Guests/PostHeader";
-import Guest from "@/Layouts/Guest";
+import Header from "@/Components/Guests/Header/Header.jsx";
+import PostHeader from "@/Components/Guests/Header/PostHeader.jsx";
+import Guest from "@/Layouts/Layout/Guest.jsx";
 import { Head } from "@inertiajs/react";
 import React from "react";
 
-function Project() {
+function Detail() {
     return (
         <>
             <Head>
@@ -16,10 +16,10 @@ function Project() {
                 <meta name="keywords" content="seo, websss design" />
             </Head>
             <Guest>
-                
+
             </Guest>
         </>
     );
 }
 
-export default Project;
+export default Detail;

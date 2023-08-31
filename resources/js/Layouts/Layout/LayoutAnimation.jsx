@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import NavigationBar from "@/Components/Guests/Navigation/NavigationBar.jsx";
+import Index from "@/Layouts/Navigation/Index.jsx";
 
 export default function Section({ children }) {
     const ref = useRef(null);

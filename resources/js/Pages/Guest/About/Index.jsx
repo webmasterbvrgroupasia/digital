@@ -1,9 +1,9 @@
-import Header from "@/Components/Guests/Header";
-import Guest from "@/Layouts/Guest";
+import Header from "@/Components/Guests/Header/Header.jsx";
+import Guest from "@/Layouts/Layout/Guest.jsx";
 import { Head } from "@inertiajs/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Section from "@/Layouts/LayoutAnimation.jsx";
+import Section from "@/Layouts/Layout/LayoutAnimation.jsx";
 
 const listButton = [
     "Social Media Management",
@@ -38,23 +38,23 @@ function setListContent(index) {
 
     return listContent.filter((item, i) => i === index);
 }
-export default function About() {
+export default function Index() {
     const [index, setIndex] = useState(0);
 
     return (
         <>
             <Head>
-                <title>About Us</title>
+                <title>Index Us</title>
                 <meta
                     name="description"
-                    content="BVR Digital About Page Description"
+                    content="BVR Digital Index Page Description"
                 />
                 <meta name="keywords" content="seo, websss design" />
             </Head>
             <Guest>
                 <Section>
                     <Header
-                        subTitle={"About BVR Digital"}
+                        subTitle={"Index BVR Digital"}
                         mainTitle={"Lorem ipsum dolor sit."}
                         descriptionText={
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget est placerat."
