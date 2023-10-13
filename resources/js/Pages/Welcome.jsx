@@ -34,7 +34,7 @@ export default function Welcome() {
 
                 {/* Introduction Section Start */}
                 <Section>
-                    <section className="py-24 grid grid-cols-2 max-w-7xl mx-auto">
+                    <section className="py-24 px-10 grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto">
                         <div className="space-y-[16px]">
                             <Section>
                                 <h2 className="text-white capitalize leading-tight text-4xl font-extrabold">
@@ -53,21 +53,25 @@ export default function Welcome() {
                             </Section>
                         </div>
                         <div className="space-y-[16px]">
-                            <p className="text-gray-400 text-xl font-normal">
-                                Track work across the enterprise through an open,
-                                collaborative platform. Link issues across Jira and
-                                ingest data from other software development tools,
-                                so your IT support and operations teams have richer
-                                contextual information to rapidly respond to
-                                requests, incidents, and changes.
-                            </p>
-                            <p className="text-gray-400 text-xl font-normal">
-                                Deliver great service experiences fast - without the
-                                complexity of traditional ITSM solutions.Accelerate
-                                critical development work, eliminate toil, and
-                                deploy changes with ease, with a complete audit
-                                trail for every change.
-                            </p>
+                            <Section>
+                                <p className="text-gray-400 text-xl font-normal">
+                                    Track work across the enterprise through an open,
+                                    collaborative platform. Link issues across Jira and
+                                    ingest data from other software development tools,
+                                    so your IT support and operations teams have richer
+                                    contextual information to rapidly respond to
+                                    requests, incidents, and changes.
+                                </p>
+                            </Section>
+                            <Section>
+                                <p className="text-gray-400 text-xl font-normal">
+                                    Deliver great service experiences fast - without the
+                                    complexity of traditional ITSM solutions.Accelerate
+                                    critical development work, eliminate toil, and
+                                    deploy changes with ease, with a complete audit
+                                    trail for every change.
+                                </p>
+                            </Section>
                         </div>
                     </section>
                 </Section>
@@ -89,13 +93,13 @@ export default function Welcome() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" ref={ref}>
                             {
                                 dataComponies.map((item, index) => (
-                                    <ParallaxText key={index} baseVelocity={30} children={  <CompenyList title={item.title} />} />
+                                    <CompenyList title={item.title} />
                                 ))
 
                             }
                             {
                                 dataComponies.map((item, index) => (
-                                    <ParallaxText key={index} baseVelocity={-30} children={  <CompenyList title={item.title} />} />
+                                    <CompenyList title={item.title}/>
                                 ))
                             }
                         </div>
@@ -105,7 +109,7 @@ export default function Welcome() {
 
                 {/* Service Section Start */}
                 <Section>
-                    <section className="pt-16 pb-24 space-y-[64px]">
+                    <section className="pt-16 pb-24 space-y-[64px] px-4">
                         <div className="space-y-[16px] max-w-7xl mx-auto">
                             <h2 className="text-white text-4xl font-extrabold text-center">
                                 Our Services List
@@ -127,7 +131,7 @@ export default function Welcome() {
                 </Section>
                 {/* Service Section End */}
                 <Section>
-                    <section className="pt-16 pb-24 space-y-[64px]">
+                    <section className="pt-16 pb-24 space-y-[64px] px-5">
                         <div className="space-y-[16px] max-w-7xl mx-auto">
                             <h2 className="text-white text-4xl font-extrabold text-left">
                                 Latest Article by BVR Digital

@@ -36,6 +36,9 @@ Route::get('/service', function () {
    return Inertia::render('Guest/Service/Index');
 });
 
+Route::get('/contact', function () {
+   return Inertia::render('Guest/Contact/Index');
+});
 
 Route::get('/blogposts',[GuestBlogpostController::class,'index']);
 Route::get('/blogpost/detail/{blogpost}',[GuestBlogpostController::class,'show']);

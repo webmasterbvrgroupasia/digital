@@ -24,18 +24,12 @@ export default function Index() {
     }
     return (
        <>
-           <nav className="w-full py-4 px-4 bg-transparent z-50 flex md:flex absolute top-0 left-0 lg:hidden items-center justify-between">
+           <nav className="w-full py-4 px-4 bg-transparent z-50 flex justify-between md:flex absolute top-0 left-0 lg:hidden items-center">
                <div>
-<<<<<<< Updated upstream:resources/js/Layouts/Navigation/Index.jsx
-                   <img
-                       src="/images/vertical-white.png"
-                       className="w-10"
-                       alt="BVR Digital"
-=======
                    <motion.img
-                       src="images/digital-horizontal-whitefont.png"
+                       src="/images/vertical-white.png"
                        alt="Logo"
-                       className="w-16"
+                       className="w-10"
                        variants={icon}
                        initial="hidden"
                        animate="visible"
@@ -43,7 +37,6 @@ export default function Index() {
                            default: { duration: 2, ease: "easeInOut" },
                            fill: { duration: 2, ease: [1, 0, 0.8, 1] }
                        }}
->>>>>>> Stashed changes:resources/js/Components/Guests/Navigation/NavigationBar.jsx
                    />
                </div>
                <div>
@@ -63,8 +56,6 @@ export default function Index() {
                            />
                        </svg>
                    </button>
-
-
                    {toggleNavbar && (
                        <div className="transition duration-500 ease-in-out">
                            <nav className="bg-white font-medium p-4 md:dark:bg-gray-900 dark:border-gray-700 absolute right-0 mr-5">
@@ -81,13 +72,7 @@ export default function Index() {
                                            About</Link>
                                    </li>
                                    <li>
-                                       <Link href="/assets"
-                                             className={`block py-2 pl-3 pr-4 ${window.location.pathname === '/assets' ? 'text-white bg-gray-800' : 'text-gray-800'} rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500`}
-                                       >
-                                           Pricing</Link>
-                                   </li>
-                                   <li>
-                                       <Link  href="/activities"
+                                       <Link  href="/contact"
                                               className={`block py-2 pl-3 pr-4 ${window.location.pathname === '/activities' ? 'text-white bg-gray-800' : 'text-gray-800'} rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500`}
                                        >
                                            Contacts</Link>
@@ -104,19 +89,12 @@ export default function Index() {
                </div>
            </nav>
            <nav className="w-full z-50 absolute top-0 left-0">
-               <div className="hidden md:hidden lg:grid grid-cols-4 items-center py-4 max-w-6xl mx-auto">
-<<<<<<< Updated upstream:resources/js/Layouts/Navigation/Index.jsx
-                   <div className="">
-                       <img
-                           src="/images/horizontal-white.png"
-                           alt="BVR Digital"
-                           className="w-44"
-=======
+               <div className="hidden md:hidden lg:grid grid-cols-2 items-center py-4 max-w-6xl mx-auto">
                    <div className="container">
                        <motion.img
-                           src="images/digital-horizontal-whitefont.png"
+                           src="/images/horizontal-white.png"
                            alt="Logo"
-                           className="w-16"
+                           className="w-44"
                            variants={icon}
                            initial="hidden"
                            animate="visible"
@@ -124,24 +102,17 @@ export default function Index() {
                                default: { duration: 2, ease: "easeInOut" },
                                fill: { duration: 2, ease: [1, 0, 0.8, 1] }
                            }}
->>>>>>> Stashed changes:resources/js/Components/Guests/Navigation/NavigationBar.jsx
                        />
                    </div>
-                   <div className="flex justify-between col-span-2">
+                   <div className="flex justify-evenly">
                        <Link href="/" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            Home
                        </Link>
                        <Link  href="/about-us" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            About
                        </Link>
-                       <Link href="/assets" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
-                           Pricing
-                       </Link>
-                       <Link  href="/activities" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
+                       <Link  href="/contact" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            Contact
-                       </Link>
-                       <Link href="/Guest/Portfolio/Index" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
-                           Index
                        </Link>
                        <Link  href="/service" className="text-gray-200 hover:text-white transition ease-in-out duration-300 font-medium">
                            Service

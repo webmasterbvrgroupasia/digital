@@ -24,7 +24,7 @@ const dataServiceList = [
         title: "Website Design and Development",
         description: "We keep Flowbite, secure, and free of spam and\n" +
             "                                abuse so that this can be the platform where\n" +
-            "                                developers come together to create.",
+            "                                developers",
         logo: <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
