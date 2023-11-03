@@ -3,9 +3,8 @@ import Guest from "@/Layouts/Layout/Guest.jsx";
 import ServiceList from "@/Components/Guests/List/ServiceList.jsx";
 import CompenyList from "@/Components/Guests/List/CompenyList.jsx";
 import dataComponies from "@/utils/dataCompenies.js";
-import {useEffect, useRef} from "react";
+import { useRef } from "react";
 import dataServiceList from "@/utils/dataListService";
-import ParallaxText from "@/Components/Guests/ParallexText.jsx";
 import Section from "@/Layouts/Layout/LayoutAnimation.jsx";
 
 export default function Welcome() {
